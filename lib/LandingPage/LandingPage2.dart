@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/OtherWebPages/Portfolio.dart';
 
 class LandingPage2 extends StatelessWidget {
   @override
@@ -45,7 +46,12 @@ class LandingPage2 extends StatelessWidget {
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(100))),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Portfolio()),
+                    );
+                  },
                   child: Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 2, horizontal: 50),

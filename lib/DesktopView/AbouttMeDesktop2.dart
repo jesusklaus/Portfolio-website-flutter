@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../Design.dart';
 import 'AcademicAboutMe.dart';
@@ -103,25 +104,40 @@ class _AboutMeDesktop2State extends State<AboutMeDesktop2> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assets/images/instagram.png',
-                          scale: 25, color: Colors.white),
+                      InkWell(
+                        child: Image.asset('assets/images/instagram.png',
+                            scale: 25, color: Colors.white),
+                        onTap: () =>
+                            launch('https://www.instagram.com/justcallmedk/'),
+                      ),
                       SizedBox(
                         width: 40,
                       ),
-                      Image.asset('assets/images/facebook.png',
-                          scale: 25, color: Colors.white),
+                      InkWell(
+                        child: Image.asset('assets/images/facebook.png',
+                            scale: 25, color: Colors.white),
+                        onTap: () => launch(
+                            'https://www.facebook.com/profile.php?id=100003396167630'),
+                      ),
                       SizedBox(
                         width: 40,
                       ),
-                      Image.asset('assets/images/github.png',
-                          scale: 25, color: Colors.white),
+                      InkWell(
+                        child: Image.asset('assets/images/github.png',
+                            scale: 25, color: Colors.white),
+                        onTap: () => launch('https://github.com/jesusklaus'),
+                      ),
                       SizedBox(
                         width: 40,
                       ),
-                      Image.asset(
-                        'assets/images/brands.png',
-                        scale: 25,
-                        color: Colors.white,
+                      InkWell(
+                        child: Image.asset(
+                          'assets/images/brands.png',
+                          scale: 25,
+                          color: Colors.white,
+                        ),
+                        onTap: () =>
+                            launch('https://www.behance.net/dineshbhathes'),
                       ),
                     ],
                   ),

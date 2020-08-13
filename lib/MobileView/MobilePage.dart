@@ -1,5 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:the_basics/OtherWebPages/Portfolio.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MobilePage extends StatefulWidget {
   @override
@@ -52,7 +54,10 @@ class _MobilePageState extends State<MobilePage> {
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5))),
-                      onPressed: () {},
+                      onPressed: () {
+                        launch(
+                            'https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRlQXpfRVZsHcnTzMvWbjkCnkQJtgSzRxhzHcsRRfDmLlJwcdVLjjQDCDwJCNXXzpVtjKqg');
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 2, horizontal: 1),
@@ -70,7 +75,10 @@ class _MobilePageState extends State<MobilePage> {
                       color: Colors.pinkAccent,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(5))),
-                      onPressed: () {},
+                      onPressed: () {
+                        launch(
+                            'https://www.linkedin.com/posts/dinesh-bhatheswar-0a0b8318b_my-resume-activity-6699649162247450625-Lnkn');
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 2, horizontal: 1),
@@ -130,7 +138,12 @@ class _MobilePageState extends State<MobilePage> {
                       color: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(100))),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Portfolio()),
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
                             vertical: 2, horizontal: 30),

@@ -4,6 +4,7 @@ import 'package:the_basics/Footer/Footer.dart';
 import 'package:the_basics/LandingPage/LandingPage2.dart';
 import 'package:the_basics/MobileView/MobileFooter.dart';
 import 'package:the_basics/MobileView/MobilePage.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LandingPage extends StatefulWidget {
   @override
@@ -42,7 +43,10 @@ class _LandingPageState extends State<LandingPage> {
                   color: Colors.white,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5))),
-                  onPressed: () {},
+                  onPressed: () {
+                    launch(
+                        'https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRlQXpfRVZsHcnTzMvWbjkCnkQJtgSzRxhzHcsRRfDmLlJwcdVLjjQDCDwJCNXXzpVtjKqg');
+                  },
                   child: Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 2, horizontal: 1),
@@ -60,7 +64,10 @@ class _LandingPageState extends State<LandingPage> {
                   color: Colors.pinkAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5))),
-                  onPressed: () {},
+                  onPressed: () {
+                    launch(
+                        'https://www.linkedin.com/posts/dinesh-bhatheswar-0a0b8318b_my-resume-activity-6699649162247450625-Lnkn');
+                  },
                   child: Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 2, horizontal: 1),
