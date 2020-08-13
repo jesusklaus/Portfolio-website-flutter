@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   @override
@@ -154,10 +155,14 @@ class Footer extends StatelessWidget {
                     SizedBox(
                       width: 40,
                     ),
-                    Image.asset(
-                      'assets/images/brands.png',
-                      scale: 25,
-                      color: Colors.white,
+                    InkWell(
+                      child: Image.asset(
+                        'assets/images/brands.png',
+                        scale: 25,
+                        color: Colors.white,
+                      ),
+                      onTap: () =>
+                          launch('https://www.instagram.com/justcallmedk/'),
                     ),
                   ],
                 ),
@@ -165,7 +170,7 @@ class Footer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 10),
                 child: Text(
-                  'Copyright ©2020 All rights reserved | The CyberDucks pvt. Ltd',
+                  'Copyright ©2020 All rights reserved | Dinesh Kumar ',
                   style: TextStyle(color: Colors.white),
                 ),
               )

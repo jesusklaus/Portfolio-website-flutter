@@ -24,6 +24,10 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.3
+  hover_effect: ^0.6.0
+  url_launcher: ^5.5.0
+  http: ^0.12.0+2
+  zoom_widget: ^0.1.3
 
 dev_dependencies:
   flutter_test:
@@ -50,3 +54,12 @@ flutter:
     - family: Montserrat
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+
+    - family: Lobster
+      fonts:
+        - asset: assets/fonts/Lobster-Regular.ttf
+
+    - family: BebasNeue
+      fonts:
+        - asset: assets/fonts/BebasNeue-Regular.otf

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:the_basics/MobileView/MobileNav%20Bar.dart';
+import 'package:the_basics/OtherWebPages/AboutMe.dart';
+import 'package:the_basics/OtherWebPages/Portfolio.dart';
+import 'package:the_basics/main.dart';
 
 class NavBar extends StatelessWidget {
   @override
@@ -35,23 +39,47 @@ class DesktopNavBar extends StatelessWidget {
             ),
             Row(
               children: [
-                Text(
-                  'Home',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyHomePage()),
+                    );
+                  },
+                  child: Text(
+                    'Home',
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  'About Me',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AboutMe()),
+                    );
+                  },
+                  child: Text(
+                    'About Me',
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  'Portfolio',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Portfolio()),
+                    );
+                  },
+                  child: Text(
+                    'Portfolio',
+                    style: TextStyle(color: Colors.white, fontSize: 15),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
@@ -65,68 +93,14 @@ class DesktopNavBar extends StatelessWidget {
                   ),
                   onPressed: () {},
                   child: Text(
-                    'Get Started',
+                    'Photography',
                     style: TextStyle(color: Colors.white, fontSize: 12),
                   ),
-                )
+                ),
               ],
             )
           ],
         ),
-      ),
-    );
-  }
-}
-
-class TabletNavBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
-  }
-}
-
-class MobileNavBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        child: Column(children: [
-          Text(
-            'DINESH KUMAR',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: 30,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'Home',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                Text(
-                  'About Us',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-                SizedBox(
-                  width: 30,
-                ),
-                Text(
-                  'Portfolio',
-                  style: TextStyle(color: Colors.white, fontSize: 15),
-                ),
-              ],
-            ),
-          )
-        ]),
       ),
     );
   }

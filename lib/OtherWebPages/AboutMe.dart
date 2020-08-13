@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:the_basics/LandingPage/LandingPage.dart';
-import 'NavBar/NavBar.dart';
+import 'package:the_basics/DesktopView/AboutMeDesktopView.dart';
+import 'package:the_basics/NavBar/NavBar.dart';
 
-void main() async {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
+class AboutMe extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: "Montserrat",
-      ),
-      home: MyHomePage(),
-    );
-  }
+  _AboutMeState createState() => _AboutMeState();
 }
 
-class MyHomePage extends StatelessWidget {
+class _AboutMeState extends State<AboutMe> {
+  List<Widget> pageChildren(double width) {
+    return <Widget>[
+      Container(),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -38,7 +29,7 @@ class MyHomePage extends StatelessWidget {
             child: Column(
               children: [
                 NavBar(),
-                LandingPage(),
+                AboutMeDesktop(),
               ],
             ),
           ),

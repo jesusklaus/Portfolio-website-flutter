@@ -2,8 +2,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:the_basics/Footer/Footer.dart';
 import 'package:the_basics/LandingPage/LandingPage2.dart';
+import 'package:the_basics/MobileView/MobileFooter.dart';
+import 'package:the_basics/MobileView/MobilePage.dart';
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
+  @override
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
   List<Widget> pageChildren(double width) {
     return <Widget>[
       Container(
@@ -90,7 +97,7 @@ class LandingPage extends StatelessWidget {
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: pageChildren(constraints.biggest.width / 2),
+                children: pageChildren(constraints.biggest.width / 2.1),
               ),
               LandingPage2(),
               Footer(),
@@ -99,11 +106,8 @@ class LandingPage extends StatelessWidget {
         } else {
           return Column(
             children: [
-              Column(
-                children: pageChildren(constraints.biggest.width),
-              ),
-              LandingPage2(),
-              Footer(),
+              MobilePage(),
+              MobileFooter(),
             ],
           );
         }

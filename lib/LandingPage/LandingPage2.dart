@@ -20,7 +20,8 @@ class LandingPage2 extends StatelessWidget {
                   color: Colors.white),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(80, 20, 80, 20),
+              padding: const EdgeInsets.fromLTRB(
+                  120, 20, 120, 20), //before it was 80 left 80 right
               child: Text(
                 'I am working as professional graphic designer and Developer, working since 2018,'
                 ' delivering graphic designs and videos for wide range of fields and areas.'
